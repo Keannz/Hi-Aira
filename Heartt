@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sluggish Heart Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .heart {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            background-color: #f44336;
+            transform: rotate(-45deg);
+            animation: sluggishBeat 2.5s infinite;
+        }
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: #f44336;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -60px;
+            left: 0;
+        }
+        .heart:after {
+            left: 60px;
+            top: 0;
+        }
+        @keyframes sluggishBeat {
+            0%, 30%, 60%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            15% {
+                transform: scale(1.15) rotate(-45deg);
+            }
+            45% {
+                transform: scale(1.2) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
