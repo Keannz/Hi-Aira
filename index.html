@@ -139,6 +139,7 @@
 
         document.getElementById('form').onsubmit = function(event) {
             event.preventDefault();
+            console.log("Form submitted"); // Debugging line
             document.getElementById('questionnaire').style.display = 'none';
             document.getElementById('thankYou').style.display = 'block';
         }
